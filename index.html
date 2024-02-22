@@ -122,27 +122,61 @@
       <!-- seat container -->
       <section class="container mx-auto my-20">
         <!-- P.H Paribahan.......................................  -->
-        <div class="flex flex-col items-center gap-5 my-5">
+        <div class="flex flex-col items-center gap-5 my-10">
           <h2 class="text-[#030712] font-bold text-4xl">P.H Paribahan</h2>
           <p class="text-[#03071299] font-normal text-center">Yes, you can run unit tests and view the results directly within the app. <br> The integrated testing features allow for a streamlined .</p>
         </div>
         <!-- ...................... -->
         <div class="flex justify-between items-center">
+          <div>
           <div class="flex gap-96">
             <div class="flex gap-4">
               <img src="images/bus-logo.png" alt="">
-              <div>
-                <h3>Greenline Paribahan</h3>
-                <p>Coach-009-WEB ! AC_Business</p>
+              <div class="">
+                <h3 class="text-[#030712] font-bold text-3xl">Greenline Paribahan</h3>
+                <p class="text-[#03071299] font-normal ">Coach-009-WEB ! AC_Business</p>
               </div>
             </div>
             <button class="btn"><img src="images/seat-green-filled.png" alt=""> 
             <p>
               <span>40</span>Sears left
             </p></button>
-          </div>
           
-          <p>dfjhklsfjkfdsjhjgfjhdjkfglkj</p>
+          </div>
+          <!-- rote ................ -->
+            <div>
+            <div class="flex justify-between my-6">
+              <p class="text-[#03071299] font-normal ">Route</p>
+              <p class="text-[#030712] font-bold ">Dhaka - Chattagram</p>
+            </div>
+            <hr/>
+            <div class="flex justify-between my-6">
+              <p class="text-[#03071299] font-normal ">Departure Time</p>
+              <p class="text-[#030712] font-bold ">9.00 PM</p>
+            </div>
+            <hr/>
+            <div class="flex justify-between my-12">
+              <label class="input input-bordered flex items-center gap-2">
+                Boarding Point - Laxmipur
+                <input type="text" class="" placeholder="" />
+              </label>
+              <label class="input input-bordered flex items-center gap-2">
+                Dropping Point - Bigura
+                <input type="text" class="" placeholder="" />
+              </label>
+              <label class="input input-bordered flex items-center gap-2">
+               Est. Time - 11 Hour
+                <input type="text" class="" placeholder="" />
+              </label>
+            </div>
+          </div>
+        </div>
+         <div class="flex flex-col items-center gap-5">
+          <img src="images/fare.png" alt="">
+          <h4 class="text-4xl font-bold text-[#030712]">550 Taka</h4> 
+          <h4 class="text-3xl font-medium text-[#03071299]">Per Seat</h4> 
+         </div>
+         
         </div>
 
         <div class="flex flex-row gap-10">
@@ -170,17 +204,73 @@
                   <div>
                     <div class="flex justify-around items-center py-6">
                       A
-                      <button class="seat-num btn">A1</button>
-                      <button class="seat-num btn">A2</button>
-                      <button class="seat-num btn">A3</button>
-                      <button class="seat-num btn">A4</button>
+                      <button class="seat-num btn" id="A1" onclick="selectSeat('A1')" >A1</button>
+                      <button class="seat-num btn" id="A2" onclick="selectSeat('A2')" >A2</button>
+                      <button class="seat-num btn" id="A3" onclick="selectSeat('A3')" >A3</button>
+                      <button class="seat-num btn" id="A4" onclick="selectSeat('A4')" >A4</button>
                     </div>
-                    <div class="flex justify-around items-center py-6">
-                      B
-                      <button class="seat-num btn">B1</button>
-                      <button class="seat-num btn">B2</button>
-                      <button class="seat-num btn">B3</button>
-                      <button class="seat-num btn">B4</button>
+                        <div class="flex justify-around items-center py-6">
+                          B
+                      <button class="seat-num btn" id="B1" onclick="selectSeat('B1')" >B1</button>
+                      <button class="seat-num btn" id="B2" onclick="selectSeat('B2')" >B2</button>
+                      <button class="seat-num btn" id="B3" onclick="selectSeat('B3')" >B3</button>
+                      <button class="seat-num btn" id="B4" onclick="selectSeat('B4')" >B4</button>
+                    </div>
+                        <div class="flex justify-around items-center py-6">
+                          C
+                      <button class="seat-num btn" id="C1" onclick="selectSeat('C1')" >C1</button>
+                      <button class="seat-num btn" id="C2" onclick="selectSeat('C2')" >C2</button>
+                      <button class="seat-num btn" id="C3" onclick="selectSeat('C3')" >C3</button>
+                      <button class="seat-num btn" id="C4" onclick="selectSeat('C4')" >C4</button>
+                    </div>
+                        <div class="flex justify-around items-center py-6">
+                          D
+                      <button class="seat-num btn" id="D1" onclick="selectSeat('D1')" >D1</button>
+                      <button class="seat-num btn" id="D2" onclick="selectSeat('D2')" >D2</button>
+                      <button class="seat-num btn" id="D3" onclick="selectSeat('D3')" >D3</button>
+                      <button class="seat-num btn" id="D4" onclick="selectSeat('D4')" >D4</button>
+                    </div>
+                        <div class="flex justify-around items-center py-6">
+                          E
+                      <button class="seat-num btn" id="E1" onclick="selectSeat('E1')" >E1</button>
+                      <button class="seat-num btn" id="E2" onclick="selectSeat('E2')" >E2</button>
+                      <button class="seat-num btn" id="E3" onclick="selectSeat('E3')" >E3</button>
+                      <button class="seat-num btn" id="E4" onclick="selectSeat('E4')" >E4</button>
+                    </div>
+                        <div class="flex justify-around items-center py-6">
+                          F
+                      <button class="seat-num btn" id="F1" onclick="selectSeat('F1')" >F1</button>
+                      <button class="seat-num btn" id="F2" onclick="selectSeat('F2')" >F2</button>
+                      <button class="seat-num btn" id="F3" onclick="selectSeat('F3')" >F3</button>
+                      <button class="seat-num btn" id="F4" onclick="selectSeat('F4')" >F4</button>
+                    </div>
+                        <div class="flex justify-around items-center py-6">
+                          G
+                      <button class="seat-num btn" id="G1" onclick="selectSeat('G1')" >G1</button>
+                      <button class="seat-num btn" id="G2" onclick="selectSeat('G2')" >G2</button>
+                      <button class="seat-num btn" id="G3" onclick="selectSeat('G3')" >G3</button>
+                      <button class="seat-num btn" id="G4" onclick="selectSeat('G4')" >G4</button>
+                    </div>
+                        <div class="flex justify-around items-center py-6">
+                          H
+                      <button class="seat-num btn" id="H1" onclick="selectSeat('H1')" >H1</button>
+                      <button class="seat-num btn" id="H2" onclick="selectSeat('H2')" >H2</button>
+                      <button class="seat-num btn" id="H3" onclick="selectSeat('H3')" >H3</button>
+                      <button class="seat-num btn" id="H4" onclick="selectSeat('H4')" >H4</button>
+                    </div>
+                        <div class="flex justify-around items-center py-6">
+                          I
+                      <button class="seat-num btn" id="I1" onclick="selectSeat('I1')" >I1</button>
+                      <button class="seat-num btn" id="I2" onclick="selectSeat('I2')" >I2</button>
+                      <button class="seat-num btn" id="I3" onclick="selectSeat('I3')" >I3</button>
+                      <button class="seat-num btn" id="I4" onclick="selectSeat('I4')" >I4</button>
+                    </div>
+                        <div class="flex justify-around items-center py-6">
+                          J
+                      <button class="seat-num btn" id="J1" onclick="selectSeat('J1')" >J1</button>
+                      <button class="seat-num btn" id="J2" onclick="selectSeat('J2')" >J2</button>
+                      <button class="seat-num btn" id="J3" onclick="selectSeat('J3')" >J3</button>
+                      <button class="seat-num btn" id="J4" onclick="selectSeat('J4')" >J4</button>
                     </div>
                   </div>
 
@@ -201,42 +291,60 @@
                     <th class="text-[#000000] font-medium text-base">Price</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <!-- row 1 -->
-                  <tr class=" text-[#03071299] font-normal text-base ">
-                    <th></th>
-                    <td>A2</td>
-                    <td>economy</td>
-                    <td>550</td>
-                  </tr>
-                  <!-- row 2 -->
-                  <tr class=" text-[#03071299] font-normal text-base ">
-                    <th></th>
-                    <td>A2</td>
-                    <td>economy</td>
-                    <td>550</td>
-                  </tr>
-                 
-                </tbody>
+
               </table>
+              <div id="seatInfo">
+
+              </div>
               <hr />
             </div>
             <div class="flex justify-between px-20 my-4">
-              <p class="font-medium text-base text-[#030712]">Total Price</p>
-              <p class="font-medium text-base text-[#030712]">BDT <span>1100</span></p>
+              <p class="font-medium text-base text-[#030712]">Total Price:</p>
+              <p class="font-medium text-base text-[#030712]">BDT <span id="totalPrice">0</span></p>
             </div>
             <!-- input -->
-            <div class="bg-white px-20 my-4">
-              <label class="input input-bordered flex items-center gap-2">
+             <div class="bg-white px-20 my-4">
+              <label class="input input-bordered flex justify-between ">
                 <input type="text" class="grow" placeholder="Have any Coupon?" />
-                <span class="btn bg-[#1DD100] py-2">Apply</span>
-              </label>
+               
+                <button  class="btn bg-[#1DD100] "> Apply</button>
+               
+              </label> 
               
             </div>
             <div class="flex justify-between px-20 my-4">
               <p class="font-medium text-base text-[#030712]">Grand Total</p>
-              <p class="font-medium text-base text-[#030712]"> BDT <span>1100</span> </p>
+              <p class="font-medium text-base text-[#030712]"> BDT <span>0</span> </p>
 
+            </div>
+            <div class="my-4">
+              <label class="form-control w-full font-bold text-xl pl-3 text-[#030712] ">
+                Passenger Name*
+               <div class="pt-5">
+                <input type="text" placeholder="Enter your name" class="input border-slate-100 w-full pt " />
+               </div>
+              </label>
+            </div>
+            <div class="my-4">
+              <label class="form-control w-full font-bold text-xl pl-3 text-[#030712] ">
+                Phone Number*
+               <div class="pt-5">
+                <input type="number" placeholder="Enter your phone number" class="input border-slate-100 w-full pt " />
+               </div>
+              </label>
+            </div>
+            <div class="my-4">
+              <label class="form-control w-full font-bold text-xl pl-3 text-[#030712] ">
+                Email Id
+               <div class="pt-5">
+                <input type="email" placeholder="Enter your email id" class="input border-slate-100 w-full pt " />
+               </div>
+              </label>
+            </div>
+            <div class="my-12 ">
+              <button class="btn w-full bg-[#1DD100] ">
+                <span class="text-[#FFFFFF] font-bold text-xl ">Next</span>
+              </button>
             </div>
           </div>
           
@@ -245,7 +353,7 @@
     </main>
 
     <!-- .............................js....................................  -->
-
+    
     <script src="script.js"></script>
 </body>
 </html>
