@@ -8,6 +8,12 @@ for (const seatBtn of allSeatBtn) {
 
         const myCartContainer = document.getElementById("my-cart-container");
 
+        const seatCount = getPrice("seat-count");
+        document.getElementById("seat-count").innerText = seatCount + 1;
+
+        const seatLeft = getPrice("seat-left");
+        document.getElementById("seat-left").innerText = seatLeft -1;
+
         const div = document.createElement("div");
         div.classList.add("flex", "m-8", "justify-around")
 
@@ -29,6 +35,9 @@ for (const seatBtn of allSeatBtn) {
         updateGrandTotal()
     })
 }
+
+
+
 // total selected seat price
 
 function totalSeatPrice(value) {
@@ -47,14 +56,14 @@ function updateGrandTotal(status) {
     if (status == undefined) {
         document.getElementById("grand-total").innerText = totalPrice;
     }
-    else{
+    else {
         const couponCode = document.getElementById("coupon-code").value;
-        
-        if(couponCode == "june24"){
-            const discountedPrice = totalPrice*.2; 
+
+        if (couponCode == "june24") {
+            const discountedPrice = totalPrice * .2;
             document.getElementById("grand-total").innerText = totalPrice - discountedPrice;
         }
-        else{
+        else {
             alert("Please enter yout valid coupon code")
         }
     }
@@ -71,5 +80,5 @@ function getPrice(id) {
     return convertPrice
 }
 
-const seat = getPrice("seat-price");
-console.log(seat);
+// const seat = getPrice("seat-price");
+// console.log(seat);
