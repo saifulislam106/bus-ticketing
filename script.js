@@ -3,8 +3,15 @@ const allSeatBtn = document.getElementsByClassName("seat-num");
 for (const seatBtn of allSeatBtn) {
     seatBtn.addEventListener("click", function (e) {
         const seatName = e.target.innerText;
+  
 
         // creat dynamic seat table cart
+
+        const highestSeatCount = getPrice("seat-count");
+        if (highestSeatCount + 1 > 4) {
+            alert("Your seat selecte is over")
+            return;
+        }
 
         const myCartContainer = document.getElementById("my-cart-container");
 
@@ -12,7 +19,9 @@ for (const seatBtn of allSeatBtn) {
         document.getElementById("seat-count").innerText = seatCount + 1;
 
         const seatLeft = getPrice("seat-left");
-        document.getElementById("seat-left").innerText = seatLeft -1;
+        document.getElementById("seat-left").innerText = seatLeft - 1;
+
+
 
         const div = document.createElement("div");
         div.classList.add("flex", "m-8", "justify-around")
@@ -41,11 +50,13 @@ for (const seatBtn of allSeatBtn) {
 // total selected seat price
 
 function totalSeatPrice(value) {
-    // console.log(value);
+    // console.log( value);
     const totalPrice = getPrice("total-price");
     const convertValue = parseInt(value)
+    // console.log(convertValue);
     const sum = totalPrice + convertValue;
     document.getElementById("total-price").innerText = sum;
+
 }
 
 // Grand total
@@ -59,8 +70,8 @@ function updateGrandTotal(status) {
     else {
         const couponCode = document.getElementById("coupon-code").value;
 
-        if (couponCode == "june24") {
-            const discountedPrice = totalPrice * .2;
+        if (couponCode == "NEW15") {
+            const discountedPrice = totalPrice * .15;
             document.getElementById("grand-total").innerText = totalPrice - discountedPrice;
         }
         else {
@@ -80,5 +91,5 @@ function getPrice(id) {
     return convertPrice
 }
 
-// const seat = getPrice("seat-price");
-// console.log(seat);
+const seat = getPrice("seat-price");
+console.log(seat);
